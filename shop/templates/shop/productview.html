@@ -1,0 +1,31 @@
+{% extends "shop/base.html" %} {% block title %} productview {% endblock title %} {% block body %}
+<style>
+    img {
+        vertical-align: middle;
+        border-style: none;
+        padding-left: 39px;
+    }
+</style>
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-4 my-5">
+            <div class="row">
+                <img src="/media/{{singleprod.image}} ">
+            </div>
+            <div class="row my-5">
+                <button class="btn btn-primary mx-2"> Buy now</button>
+                <button class="btn btn-primary">Add to cart</button>
+            </div>
+        </div>
+        <div class="col-md-6 my-5">
+            <h5 class="text-center">{{singleprod.product_name}}</h5>
+            <p class="text-center">Rs: {{singleprod.price}}</p>
+            <p class="text-center">{{singleprod.desc}}</p>
+
+
+        </div>
+
+    </div>
+</div>
+{% endblock body%}
